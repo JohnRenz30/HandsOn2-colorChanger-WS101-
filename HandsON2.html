@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript colorChanger() Hands-On</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #colorChangeContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #colorChangeDiv {
+            color: green;
+            font-size: 20px;
+            padding: 20px;
+            border: 2px solid #333;
+            background-color: #fff;
+            margin-bottom: 20px;
+            transition: color 0.5s;
+        }
+
+        #colorChangeButton {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        #colorChangeButton:hover {
+            background-color: #2980b9;
+        }
+
+        #colorChangeButton:active {
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript colorChanger() Hands-On</h1>
+
+    <div id="colorChangeContainer">
+        <div id="colorChangeDiv">Hello World!</div>
+        <button id="colorChangeButton" onclick="changeColor()">Click Me</button>
+    </div>
+
+    <script>
+        const colorChangeDiv = document.getElementById('colorChangeDiv');
+        const colorChangeButton = document.getElementById('colorChangeButton');
+
+        function changeColor() {
+            if (colorChangeDiv.style.color === 'green') {
+                colorChangeDiv.style.color = 'blue';
+            } else {
+                colorChangeDiv.style.color = 'green';
+            }
+        }
+    </script>
+
+</body>
+</html>
